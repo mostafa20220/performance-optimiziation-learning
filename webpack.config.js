@@ -2,7 +2,7 @@ const path = require('path');
 const CleanPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     shop: './src/non-optimized/shop.js'
   },
@@ -11,7 +11,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist', 'assets', 'scripts'),
     publicPath: 'assets/scripts/'
   },
-  devtool: 'eval-cheap-module-source-map',
+  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.join(__dirname, "./dist"), // current dir where this file resides
